@@ -1,4 +1,0 @@
-services:
-#    training_join.example:
-#        class: Training\Bundle\JoinBundle\Example
-#        arguments: [@service_id, "plain_value", %parameter%]

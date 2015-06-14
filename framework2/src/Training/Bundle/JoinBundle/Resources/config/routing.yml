@@ -1,3 +1,0 @@
-training_join_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: TrainingJoinBundle:Default:index }
