@@ -1,0 +1,4 @@
+services:
+#    academy_join.example:
+#        class: Academy\Bundle\JoinBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

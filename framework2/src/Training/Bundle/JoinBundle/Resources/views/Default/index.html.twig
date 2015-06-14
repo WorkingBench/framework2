@@ -1,0 +1,11 @@
+{% extends 'TrainingJoinBundle:Default:base.html.twig' %}
+
+{% block body %}
+
+<h1>Join our Team</h1>
+</br>
+<form action="{{ path('join') }}" method="post" {{ form_enctype(form) }}>
+	{{ form_widget(form) }}
+	<input type="submit" value="Join Now"/>
+</form>
+{% endblock %}

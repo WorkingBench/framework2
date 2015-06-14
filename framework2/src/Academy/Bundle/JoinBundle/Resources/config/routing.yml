@@ -1,0 +1,3 @@
+academy_join_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: AcademyJoinBundle:Default:index }
