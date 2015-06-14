@@ -1,0 +1,24 @@
+{% extends "LoginLoginBundle:Default:index.html.twig" %}
+
+
+
+{% block container %}
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav" style="position: center">
+                <li><a href="{{path('login_login_welcome')}}" class="navbar-link">{% trans %}Home{% endtrans %}</a></li>
+                <li><a href="{{path('login_login_forum')}}" class="navbar-link">{% trans %}Forum{% endtrans %}</a></li>
+                <li><a href="{{path('login_login_profile')}}" class="navbar-link">{% trans %}Profile{% endtrans %}</a></li>
+                <li><a href="{{path('login_login_logout')}}" class="navbar-link">{% trans %}Log Out{% endtrans %}</a></li>
+            </ul>
+            {% set params = app.request.attributes.get('_route_params')|merge(app.request.query.all()) %}
+            {% set frParams = params|merge({'_locale': 'fr'}) %}
+            {% set enParams = params|merge({'_locale': 'en'}) %}
+            {%if app.request.locale == "en"%}
+                <a href="{{ path(app.request.attributes.get('_route'), frParams) }}" style="float: right;">French</a>
+            {%else%}
+                <a href="{{ path(app.request.attributes.get('_route'), enParams) }}" style="float: right;">English</a>
+            {%endif%}
+        </div>
+    </nav>
+{% endblock %}

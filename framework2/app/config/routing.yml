@@ -1,10 +1,7 @@
-academy_join:
-    resource: "@AcademyJoinBundle/Resources/config/routing.yml"
+login_login:
+    resource: "@LoginLoginBundle/Resources/config/routing.yml"
     prefix:   /
 
-join:
-    pattern: /join/
-    defaults: { _controller: TrainingJoinBundle:Default:index}
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation

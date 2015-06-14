@@ -1,0 +1,35 @@
+login_login_homepage:
+    path:     /login
+    defaults: { _controller: LoginLoginBundle:Default:index }
+    requirements:
+        _locale: en|fr
+
+login_login_signup:
+    path:     /{_locale}/signup
+    defaults: { _controller: LoginLoginBundle:Default:signup }
+    requirements:
+        _locale: en|fr
+        
+login_login_logout:
+    path:     /logout
+    defaults: { _controller: LoginLoginBundle:Default:logout }
+    requirements:
+        _locale: en|fr
+    
+login_login_welcome:
+    path:     /{_locale}/welcome
+    defaults: { _controller: LoginLoginBundle:Default:welcome }
+    requirements:
+       _locale: en|fr
+        
+login_login_forum:
+    path:     /{_locale}/forum
+    defaults: { _controller: LoginLoginBundle:Default:forum }
+    requirements:
+        _locale: en|fr
+        
+login_login_profile:
+    path:     /{_locale}/profile
+    defaults: { _controller: LoginLoginBundle:Default:profile }
+    requirements:
+        _locale: en|fr
